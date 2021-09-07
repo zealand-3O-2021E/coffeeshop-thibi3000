@@ -6,6 +6,6 @@ namespace CoffeeShopConsoleApp
 {
     interface IMilk
     {
-        int mlMilk();
+        int MlMilk();
     }
 }

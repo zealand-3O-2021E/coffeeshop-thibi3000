@@ -13,15 +13,8 @@ namespace CoffeeShopConsoleApp
         }
 
         public override int price()
-        {
-            if (Discount <= 5)
-            {
-                return 40 * Discount;
-            }
-            else
-            {
-                throw new Exception("Discount can't be bigger than 5!");
-            }
+        {           
+                return 40 - base.Discount;           
         }
 
         public override string Strength()
@@ -29,7 +22,7 @@ namespace CoffeeShopConsoleApp
             return "Weak";
         }
 
-        public int mlMilk()
+        public int MlMilk()
         {
             return 200;
         }

@@ -13,10 +13,17 @@ namespace CoffeeShopConsoleApp
         public string Blend { get; set; }
 
         public Coffee(int discount, string blend)
-        {
+        {    
+            if (discount > 5)
+                throw new ArgumentException("Not more then 5 discount");
+
+            if (discount < 0)
+                throw new ArgumentException("Not less than 0 discount");
+            
             Discount = discount;
             Blend = blend;
         }
+            
 
         public abstract string Strength();
         
@@ -26,16 +33,8 @@ namespace CoffeeShopConsoleApp
         /// </summary>
         /// <returns>20 dkr</returns>
         public virtual int price()
-        {
-            if (Discount <= 5)
-            {
-                return 20 * Discount;
-            }
-            else
-            {
-                throw new Exception("Discount can't be bigger than 5!");
-            }
-
+        {          
+                return 20 - Discount;           
         }
 
 
