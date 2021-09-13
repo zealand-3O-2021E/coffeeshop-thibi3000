@@ -15,7 +15,7 @@ namespace CoffeeShopConsoleApp
         public Coffee(int discount, string blend)
         {    
             if (discount > 5)
-                throw new ArgumentException("Not more then 5 discount");
+                throw new ArgumentException("Not more than 5 discount");
 
             if (discount < 0)
                 throw new ArgumentException("Not less than 0 discount");
@@ -32,7 +32,7 @@ namespace CoffeeShopConsoleApp
         /// It's possible to override this method, beacuse it is virtual 
         /// </summary>
         /// <returns>20 dkr</returns>
-        public virtual int price()
+        public virtual int price()//virtual zodat we ze kunnen overschrijven
         {          
                 return 20 - Discount;           
         }

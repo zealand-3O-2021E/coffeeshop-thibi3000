@@ -18,7 +18,7 @@ namespace CoffeeShopConsoleApp
 
             };
 
-            List<Coffee> coffeeWithMilk = new List<Coffee>()
+            List<IMilk> coffeeWithMilk = new List<IMilk>()
             {
                 new Latte(4, "Espresso"),
                 new Cortado(2, "Kalita Wave")
